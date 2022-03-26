@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="styles.css" rel="stylesheet">
+<title>carsguide.com.au Looker Upper</title>
+
+<script>
+function calculate () {
+
+    var c_make = document.getElementById("car_make").value;
+    var c_model = document.getElementById("car_model").value;
+    var c_year = document.getElementById("car_year").value;
+    var c_url = '';
+
+    c_url += 'http://carsguide.com.au/'
+    c_url += c_make
+    c_url += '/'
+    c_url += c_model
+    c_url += '/'
+    c_url += c_year
+
+//    document.getElementById("taxPayable").innerHTML = c_url
+
+    window.open(c_url, '_blank');
+
+}
+</script>
+</head>
+
+<body>
+		<div class="container">
+			<div class="header">
+				<h1 class="header-heading">carsguide.com.au Looker Upper</h1>
+                       </div>
+			<div class="nav-bar">
+				<ul class="nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="tax-calculator.html">Tax Payable</a></li>
+					<li><a href="date-calculator.html">Date Difference</a></li>
+				</ul>
+			</div>
+			<div class="content">
+				<div class="main">
+<h1>carsguide.com.au  Looker Upper</h1>
+<!-- the form -->
+<p>
+Make (e.g. 'Toyota'): <input type="text" id="car_make" /><br />
+Model (e.g. 'Echo'): <input type="text" id="car_model" /><br />
+Year (e.g. '2012'): <input type="text" id="car_year" />
+</p>
+<!-- the input button -->
+<p>
+<input type="button" value="Take me there" onclick="calculate()" />
+</p>
+<!-- the results -->
+<p>
+<div id="taxPayable"></div>
+</p>
+
+                                </div>
+                        </div>
+
+
+			<div class="footer">
+                        <p>carsguide.com.au Looker Upper by <a href="https://github.com/dmudigdo" target="_new">Didi Mudigdo</a> | CSS design courtesy of <a href="http://css.maxdesign.com.au/#layouts" target="_new">Max Design</a></p>
+                        </div>
+                </div>
+</body>
+
+</html>
